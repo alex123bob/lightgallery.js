@@ -1,0 +1,16 @@
+{
+  "name": "lightgallery.js",
+  "homepage": "https://github.com/alex123bob/lightgallery.js",
+  "_release": "8bbcd124f5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8bbcd124f5e065a7531a82c99cdf37268425e565"
+  },
+  "_source": "https://github.com/alex123bob/lightgallery.js.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/alex123bob/lightgallery.js.git",
+  "main": [
+    "dist/js/lightgallery.js"
+  ]
+}
