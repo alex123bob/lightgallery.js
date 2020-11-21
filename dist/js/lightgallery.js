@@ -1503,7 +1503,7 @@
 
             // If you drag the slide and release outside gallery gets close on chrome
             // for preventing this check mousedown and mouseup happened on .lg-item or lg-outer
-            _lgUtils2.default.on(_this.outer, 'mousedown.lg', function (e) {
+            _lgUtils2.default.on(_this.outer, _this.isTouch ? 'touchstart.lg' : 'mousedown.lg', function (e) {
 
                 if (_lgUtils2.default.hasClass(e.target, 'lg-outer') || _lgUtils2.default.hasClass(e.target, 'lg-item') || _lgUtils2.default.hasClass(e.target, 'lg-img-wrap')) {
                     mousedown = true;
@@ -1512,7 +1512,7 @@
                 }
             });
 
-            _lgUtils2.default.on(_this.outer, 'mouseup.lg', function (e) {
+            _lgUtils2.default.on(_this.outer, _this.isTouch ? 'touchend.lg' : 'mouseup.lg', function (e) {
 
                 if (_lgUtils2.default.hasClass(e.target, 'lg-outer') || _lgUtils2.default.hasClass(e.target, 'lg-item') || _lgUtils2.default.hasClass(e.target, 'lg-img-wrap') && mousedown) {
                     if (!_lgUtils2.default.hasClass(_this.outer, 'lg-dragging')) {
