@@ -1337,7 +1337,7 @@ Plugin.prototype.closeGallery = function() {
 
         // If you drag the slide and release outside gallery gets close on chrome
         // for preventing this check mousedown and mouseup happened on .lg-item or lg-outer
-        utils.on(_this.outer, 'mousedown.lg', function(e) {
+        utils.on(_this.outer, _this.isTouch ? 'touchstart.lg' : 'mousedown.lg', function(e) {
 
             if (utils.hasClass(e.target, 'lg-outer') || utils.hasClass(e.target, 'lg-item') || utils.hasClass(e.target, 'lg-img-wrap')) {
                 mousedown = true;
@@ -1347,7 +1347,7 @@ Plugin.prototype.closeGallery = function() {
 
         });
 
-        utils.on(_this.outer, 'mouseup.lg', function(e) {
+        utils.on(_this.outer, _this.isTouch ? 'touchend.lg' : 'mouseup.lg', function(e) {
 
             if (utils.hasClass(e.target, 'lg-outer') || utils.hasClass(e.target, 'lg-item') || utils.hasClass(e.target, 'lg-img-wrap') && mousedown) {
                 if (!utils.hasClass(_this.outer, 'lg-dragging')) {
